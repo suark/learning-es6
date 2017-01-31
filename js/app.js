@@ -1,12 +1,15 @@
-"use strict"
-
-function blockBindingDemo() {
-  let roll_num = 123
-  if (true) {
-    let roll_num = 456
-    console.log(roll_num)
-  }
-  console.log(roll_num)
+var helloWorld = function(name, greeting) {
+  return name + ' ' + greeting;
 }
 
-blockBindingDemo()
+console.log(helloWorld('Hello', 'World!'));
+
+const newGreeting1 = (name, greeting) => {
+  return name + ' ' + greeting;
+}
+
+console.log(newGreeting1('Sup', 'Planet'));
+
+const newGreeting2 = (name, greeting) => name + ' ' + greeting;
+
+console.log(newGreeting2('Yo', 'Earth'));
