@@ -1,23 +1,11 @@
-var helloWorld = function(name, greeting) {
-  return name + ' ' + greeting;
-}
+const games = ['Halo', 'WoW', 'Dark Souls']
 
-console.log(helloWorld('Hello', 'World!'));
+console.log(games.map(game => {
+  return game.toUpperCase()
+}))
 
-const newGreeting1 = (name, greeting) => {
-  return name + ' ' + greeting;
-}
+const numArray = [1, 3, 55, 2, 29, 22, 2]
 
-console.log(newGreeting1('Sup', 'Planet'));
+const sortedArray = numArray.sort((a, b) => a < b? 1: -1)
 
-const newGreeting2 = (name, greeting) => name + ' ' + greeting;
-
-console.log(newGreeting2('Yo', 'Earth'));
-
-const newGreetingOneParam = greeting => greeting;
-
-console.log(newGreetingOneParam('yello'));
-
-const newGreetingNoParam = () => "This is how I always say Hi";
-
-console.log(newGreetingNoParam());
+console.log(sortedArray)
