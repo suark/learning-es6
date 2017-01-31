@@ -13,3 +13,11 @@ console.log(newGreeting1('Sup', 'Planet'));
 const newGreeting2 = (name, greeting) => name + ' ' + greeting;
 
 console.log(newGreeting2('Yo', 'Earth'));
+
+const newGreetingOneParam = greeting => greeting;
+
+console.log(newGreetingOneParam('yello'));
+
+const newGreetingNoParam = () => "This is how I always say Hi";
+
+console.log(newGreetingNoParam());
