@@ -1,29 +1,20 @@
-const games = ['Halo', 'WoW', 'Dark Souls']
+//destructured assignment
 
-console.log(games.map(game => {
-  return game.toUpperCase()
-}))
+var [d, m, y] = [15, 7, 2015]
 
-const numArray = [1, 3, 55, 2, 29, 22, 2]
+[m, y] = [y, m]
 
-const sortedArray = numArray.sort((a, b) => a > b? 1: -1)
+console.log(m, y)
 
-console.log(sortedArray)
+var a = 1;
+var b = 3;
 
-//arrow functions use "this" based on where it's defined
+[a, b] = [b, a];
+console.log(a); // 3
+console.log(b); // 1
 
-function Course() {
-  this.name = "Master ES6"
-  this.author = "Bri"
-  this.description = "This is a book about code"
-  this.getSummary = () => this.name + ', by ' + this.author
-
-  this.getDetails = () => {
-    window.setTimeout(() => {
-      console.log(this.getSummary() + ': ' + this.description)
-    }, 1000)
-  }
-}
-
-const course = new Course()
-course.getDetails()
+// let [a, b, c] = [1, 2, 3]
+// console.log(a, b, c)
+//
+// [b, c] = [c, b]
+// console.log(a, b, c)
