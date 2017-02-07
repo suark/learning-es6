@@ -1,7 +1,12 @@
 //destructured assignment
 
-var [d, m, y] = [15, 7, 2015]
 
-;[m, y] = [y, m]
+function getDate() {
+  return [15, 7, 2015]
+}
 
-console.log(m, y)
+let [date, month] = getDate()
+let [,,year] = getDate()
+
+console.log(date, month)
+console.log(year)
