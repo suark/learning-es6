@@ -2,11 +2,16 @@
 
 
 function getDate() {
-  return [15, 7, 2015]
+  return {
+    d: 15,
+    m: 7,
+    y: 2015
+  }
 }
 
-let [date, month] = getDate()
-let [,,year] = getDate()
+let {
+  m: month,
+  y: year
+} = getDate()
 
-console.log(date, month)
-console.log(year)
+console.log(month, year)
