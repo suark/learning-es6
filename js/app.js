@@ -9,9 +9,6 @@ function getDate() {
   }
 }
 
-let {
-  m: month,
-  y: year
-} = getDate()
+let {m, y} = getDate()
 
-console.log(month, year)
+console.log(m, y)
