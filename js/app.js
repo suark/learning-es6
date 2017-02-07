@@ -1,14 +1,9 @@
-//destructured assignment
+//default parameters
 
-
-function getDate() {
-  return {
-    d: 15,
-    m: 7,
-    y: 2015
-  }
+function testTheThing( thing1='hello', thing2='hi') {
+  console.log(thing1, thing2)
 }
 
-let {m, y} = getDate()
+testTheThing()
 
-console.log(m, y)
+testTheThing('woah', 'wow')
