@@ -1,20 +1,21 @@
-"use strict";
-//iterators
+//generators
+/*
+A special kind of function that returns an iterator
 
-let words = ['skills', 'bakery', 'studio']
-console.log('words:', words)
+They stop execution after each "yield" until next is called again
+*/
 
-console.log('-------entries')
-for (let word of words.entries()) {
-  console.log(word)
+//the * makes it a generator function
+function* logMessages() {
+  console.log('learning es6')
+  yield 'sup homies'
 }
 
-console.log('-------values')
-for (let word of words.values()) {
-  console.log(word)
-}
+let msg = logMessages()
+console.log('msg', msg)
 
-console.log('-------keys')
-for (let word of words.keys()) {
-  console.log(word)
-}
+let output = msg.next()
+console.log('output', output)
+
+let result = msg.next()
+console.log('result', result)
