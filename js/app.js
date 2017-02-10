@@ -1,11 +1,6 @@
-//rest parameters
+//spread operator
 
-function restParameters(firstName, lastName, ...details) {
-  console.log(firstName, lastName)
-  console.log(details)
-  for (contact in details) {
-    console.log(details[contact])
-  }
-}
+let numbers = [1,2,3,4,5]
 
-restParameters('Brian', 'Kraus', 'detail1', 'detail2', 'detail3')
+let max = Math.max(...numbers)
+console.log(max)
