@@ -1,14 +1,20 @@
 "use strict";
-//destructuring objects
+//iterators
 
-let course = {
-  name: 'Dutch Ovens For Life',
-  publisher: 'WootWoot'
+let words = ['skills', 'bakery', 'studio']
+console.log('words:', words)
+
+console.log('-------entries')
+for (let word of words.entries()) {
+  console.log(word)
 }
 
-function courseDetails(c) {
-  let {name, publisher, ?price} = c
-  console.log(name, publisher)
+console.log('-------values')
+for (let word of words.values()) {
+  console.log(word)
 }
 
-courseDetails(course)
+console.log('-------keys')
+for (let word of words.keys()) {
+  console.log(word)
+}
