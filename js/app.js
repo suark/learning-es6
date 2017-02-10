@@ -1,9 +1,11 @@
-//default parameters
+//rest parameters
 
-function testTheThing( thing1='hello', thing2='hi') {
-  console.log(thing1, thing2)
+function restParameters(firstName, lastName, ...details) {
+  console.log(firstName, lastName)
+  console.log(details)
+  for (contact in details) {
+    console.log(details[contact])
+  }
 }
 
-testTheThing()
-
-testTheThing('woah', 'wow')
+restParameters('Brian', 'Kraus', 'detail1', 'detail2', 'detail3')
