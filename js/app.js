@@ -7,15 +7,13 @@ They stop execution after each "yield" until next is called again
 
 //the * makes it a generator function
 function* logMessages() {
-  console.log('learning es6')
   yield 'sup homies'
+  yield 'sup bromies'
+  yield 'sup yomies'
 }
 
 let msg = logMessages()
-console.log('msg', msg)
 
-let output = msg.next()
-console.log('output', output)
-
-let result = msg.next()
-console.log('result', result)
+for (let word of msg) {
+  console.log(word)
+}
