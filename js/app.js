@@ -1,7 +1,24 @@
-//destructured parameters
+console.log('array destructuring')
 
-function logMessage(msg, {name:courseName, publisher:publisherName}) {
-  console.log(msg, courseName, publisherName)
+let numbers  = [10, 20, 30, 40, 50]
+
+let [first, second, third, , fifth] = numbers
+
+console.log(fifth)
+
+function arrayDestructuring([first, second, ...rest]) {
+  console.log(first)
+  console.log(second)
+  console.log(rest)
 }
 
-logMessage('I like turtles', {name: 'Dude', publisher: "Sweet Prod."})
+arrayDestructuring(numbers)
+
+console.log('destructuring nested arrays')
+
+let numbers_nested = [10, 20, [30, 40, 50]]
+let [first_n, second_n, [third_n, , fifth_n]] = numbers_nested
+
+console.log(first_n)
+console.log(second_n)
+console.log(fifth_n)
