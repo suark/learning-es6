@@ -1,6 +1,7 @@
-//spread operator
+//destructured parameters
 
-let numbers = [1,2,3,4,5]
+function logMessage(msg, {name:courseName, publisher:publisherName}) {
+  console.log(msg, courseName, publisherName)
+}
 
-let max = Math.max(...numbers)
-console.log(max)
+logMessage('I like turtles', {name: 'Dude', publisher: "Sweet Prod."})
