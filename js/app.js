@@ -1,19 +1,19 @@
 "use strict";
 
-//Sets
+//Maps
 
-let s = new Set([10,20,30])
+let m = new Map()
 
-console.log(s.has(40))
+let sb = {name: 'brian'}
+//The point here is to show that a map can have any JS object as a key, in a Map
+//where in an object, a key must be a string
+m.set(sb, 'Learning es6')
 
-s.add(40)
+console.log(m.has(sb))
+console.log(m.get(sb))
 
-console.log(s)
+console.log(sb)
 
-s.add(20)
-
-console.log(s)
-
-s.delete(30)
-
-console.log(s)
+for (var item of m.values()) {
+  console.log(item)
+}
