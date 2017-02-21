@@ -1,55 +1,33 @@
 "use strict";
 
-//Symbols
-//new primitive data type
-// a symbol is unique and immutable
-//can use symbols as identifiers when adding properties to an object
+//weakmaps
 
-//how to create a symbols
-// let key = Symbol('a thing')
-// let key2 = Symbol('a thing')
-//these are unique even though they look the same
+//a collection of keys and values, but the key must be an object
+let weak = new WeakMap()
 
-let a = new Map()
+// weak.set('publisher', 'skillbakery')
+// console.log(weak.get('publisher'))
+//These get an error because a key must be an object
 
-{
-  let key = Symbol()
-  a.set(key, 'SkillBakery')
-  //Here we can get and reset a 'value' as a.get(key)
-  console.log(a.get(key))
-  //this will work
-}
-//but out here, we are outside of the scope of that block and the key will not work
-//console.log(a.get(key))
-//But we can check that a still has a size of 1 because the key did work in the block
-console.log(a.size)
+let course = {name: 'Things', publisher:'skillbakery'}
+let company = {name: 'companyname'}
 
-let courseName = Symbol()
+weak.set(course, {price: 59})
+weak.set(company, 'SB')
 
-let course = {
-  publisher: 'SkillBakery',
-  [courseName]: 'ES6'
-}
+console.log(weak.get(course))
+console.log(weak.get(company))
 
-console.log(course)
+//Other functions
+console.log(weak.has(course))
+weak.delete(course)
+console.log(weak)
+//Weakmap's .clear function was removed so it won't work anymore
+// weak.clear(company)
+// console.log(weak)
+//Now if we change the company object
+// company = null
+// console.log(weak.get(company))
+//We can no longer access the associated value
 
-//a symbol can create a unique key in an object
-//symbol properties will not show in a for in loop
-
-let props = []
-for (let p in course) {
-  console.log(p)
-  props.push(p)
-}
-
-console.log(props.length)
-console.log(props)
-
-//You can't get symbol properties even if you convert object to json
-// but you can use this new function
-
-console.log(Object.getOwnPropertySymbols(course)[0])
-//You can get the value of the symbol key variable by getting the
-//keysymbol then using it to index the object that uses that key symbol
-let keySymbol = Object.getOwnPropertySymbols(course)[0]
-console.log(course[keySymbol])
+//Weakmap has no size. It is an unorderd collection of objects and values
