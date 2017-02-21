@@ -1,19 +1,11 @@
 "use strict";
 
-//Maps
+//Symbols
+//new primitive data type
+// a symbol is unique and immutable
+//can use symbols as identifiers when adding properties to an object
 
-let m = new Map()
-
-let sb = {name: 'brian'}
-//The point here is to show that a map can have any JS object as a key, in a Map
-//where in an object, a key must be a string
-m.set(sb, 'Learning es6')
-
-console.log(m.has(sb))
-console.log(m.get(sb))
-
-console.log(sb)
-
-for (var item of m.values()) {
-  console.log(item)
-}
+//how to create a symbols
+let key = Symbol('a thing')
+let key2 = Symbol('a thing')
+//these are unique even though they look the same
