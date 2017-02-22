@@ -1,48 +1,50 @@
 "use strict";
 
-//more on promises
-
-//constructor of a promise
-let promise = new Promise(function(resolve, reject) {
-  if (success) {
-    resolve(data)
-  } else {
-    reject('Error')
+//classes
+//convention to use capital to show it is a class
+class Shape {
+  constructor(l, b) {
+    this.l = l
+    this.b = b
   }
-})
 
-//defining the functions to be used as your resolve and reject for the promise
-promise.then(function(result) {
-  console.log(result)
-}, function(err) {
-  console.log(err)
-})
+  render() {
+    console.log("rendering shape")
+  }
+}
 
-//other functions of promise
+//and you have inheritance
+class Circle extends Shape {
+  constructor(l, b, radius) {
+    super(l, b)
+    this.radius = radius
+  }
 
-//This function will only be called when all the promises passed in, return
-//this is freaking awesome
-Promise.all([promise])
-//how to use it
-Promise.all([promise]).then(function(results){
-  //do something
-})
+  //a static function can be used without making an instance of the class
+  //which is why it works when used in get area
+  //"it's a property not a function"
+  static get pi() {
+    return 3.14
+  }
+  //get is what makes it a property instead of a function
+  get area() {
+    return Circle.pi * this.radius * this.radius
+  }
 
-//Race function will run when at least one of the promises has completed
-Promise.race([promise]).then(function(results){
-  //do something
-})
+  render() {
+    console.log("rendering circle")
+  }
+}
 
-//Refect function will return a promise that is rejected
-Promise.reject(new Error('fail')).then(function(error) {
-  // not called
-}, function(error) {
-  console.log(error); // Stacktrace
-});
+var circ = new Circle(0, 0, 20)
+console.log('circ\'s l:', circ.l)
+circ.l = 40
+console.log('circ\'s l:', circ.l)
 
-//The resolve function will return a promise that is resolved
-Promise.resolve('Success').then(function(value) {
-  console.log(value); // "Success"
-}, function(value) {
-  // not called
-});
+console.log('circ\'s b:', circ.b)
+console.log('circ\'s radius:', circ.radius)
+
+console.log('Pi:', Circle.pi)
+console.log('Area of Circle:', circ.area)
+
+circ.render()
