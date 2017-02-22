@@ -1,6 +1,4 @@
-"use strict";
+// Modules
+let meTestThis = 'something'
 
-//modules
-let metestthis = 'something'
-
-console.log(metestthis)
+console.log(meTestThis)
