@@ -1,4 +1,8 @@
 // Modules
-let meTestThis = 'something'
+import MyMath from './MyMath'
 
-console.log('test', meTestThis)
+let x = new MyMath()
+
+let result = x.rectArea(2, 2)
+
+console.log(result)
