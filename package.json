@@ -1,0 +1,12 @@
+{
+  "name": "learning-es6",
+  "version": "1.0.0",
+  "description": "A project where I'm learning some es6 stuff",
+  "main": "index.js",
+  "repository": "git@github.com:suark/learning-es6.git",
+  "author": "suark <brian@granduke.ca>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}
