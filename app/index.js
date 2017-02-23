@@ -1,8 +1,11 @@
 // Modules
-import MyMath from './MyMath'
+import {pi, rectArea, sqrt} from './modules'
 
-let x = new MyMath()
+let area = rectArea(2, 4)
+console.log(area)
 
-let result = x.rectArea(2, 2)
+let root = sqrt(9)
+console.log(root)
 
-console.log(result)
+let pie = pi()
+console.log(pie)
