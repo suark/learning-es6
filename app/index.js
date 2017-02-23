@@ -1,25 +1,12 @@
-// New Number Methods
-console.log('---Number Truncation---')
-console.log(Math.trunc(39.7))
-console.log(Math.trunc(0.5))
-console.log(Math.trunc(-0.3))
+// New Array Methods
 
-console.log('---Number Type Checking---')
-console.log(Number.isNaN(45))
-console.log(Number.isNaN(NaN))
+let arr = ['Thing', 'Ding', 'Bing', 'Wing']
 
-console.log(Number.isFinite(Infinity))
-console.log(Number.isFinite(-Infinity))
-console.log(Number.isFinite(NaN))
-console.log(Number.isFinite(156))
+console.log(arr.find(x => x == 'Bing'))
 
-console.log('---Sign Determination---')
-console.log(Math.sign(10))
-console.log(Math.sign(0))
-console.log(Math.sign(-0))
-console.log(Math.sign(-10))
-console.log(Math.sign(NaN))
+let ray = [1, 2, 3, 5]
 
-console.log('---Number Safety Checking---')
-console.log(Number.isSafeInteger(42))
-console.log(Number.isSafeInteger(90081992547408822))
+console.log(ray.find(x => x > 1))
+console.log(ray.find(x => x > 2))
+console.log(ray.find(x => x > 3))
+console.log(ray.find(x => x > 5))
