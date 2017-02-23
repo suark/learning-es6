@@ -1,19 +1,10 @@
-// New Array stuff
+// Object Property
 
-let result = Array.from(document.querySelectorAll('*'))
-console.log(result)
+let destination = {start: 0}
+let source_mid = {interval: 10, duration: 20}
+let source_end = {distance: 40}
 
-let m = new Map([[1, 2], [2, 4], [4, 8]])
-
-console.log(Array.from(m))
-console.log(Array.from("foo"))
-
-let arr = Array.of(1, 2, 3)
-
-console.log(arr)
-
-console.log([0, 0, 0].fill(7, 1))
-
-console.log([1, 2, 3].findIndex(x => x === 2))
-
-console.log([1, 2, 3, 4, 5].copyWithin(3, 1))
+// Assign properties from one object into another. It makes a copy, not reference
+Object.assign(destination, source_mid, source_end)
+source_mid.interval = 30
+console.log(destination)
