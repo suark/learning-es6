@@ -1,11 +1,14 @@
-// Modules
-import {pi, rectArea, sqrt} from './modules'
+// New String Methods
 
-let area = rectArea(2, 4)
-console.log(area)
+console.log('Hello World'.repeat(2))
 
-let root = sqrt(9)
-console.log(root)
+console.log('World'.includes('rl'))
 
-let pie = pi()
-console.log(pie)
+console.log('World'.startsWith('Wo'))
+console.log('World'.endsWith('d'))
+
+console.log('\uD83D\uDE80')
+
+for (let ch of 'World') {
+  console.log(ch)
+}
