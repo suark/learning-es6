@@ -1,12 +1,19 @@
-// New Array Methods
+// New Array stuff
 
-let arr = ['Thing', 'Ding', 'Bing', 'Wing']
+let result = Array.from(document.querySelectorAll('*'))
+console.log(result)
 
-console.log(arr.find(x => x == 'Bing'))
+let m = new Map([[1, 2], [2, 4], [4, 8]])
 
-let ray = [1, 2, 3, 5]
+console.log(Array.from(m))
+console.log(Array.from("foo"))
 
-console.log(ray.find(x => x > 1))
-console.log(ray.find(x => x > 2))
-console.log(ray.find(x => x > 3))
-console.log(ray.find(x => x > 5))
+let arr = Array.of(1, 2, 3)
+
+console.log(arr)
+
+console.log([0, 0, 0].fill(7, 1))
+
+console.log([1, 2, 3].findIndex(x => x === 2))
+
+console.log([1, 2, 3, 4, 5].copyWithin(3, 1))
